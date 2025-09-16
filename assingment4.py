@@ -22,4 +22,26 @@ How many months will it take him to pay off the car.  How much interest has he p
 84 months
 He will have paid 21711.60 in interest
 """
+P=float(input("Enter the initial debt($):"))
+rate=float(input("Enter the monthly interest rate(%):"))
+r=rate/100
+mp=float(input("Enter the monthly payment($):"))
+balance=P
+month=0
+total_interest=0
+while balance > 0:
+    interest = balance * r
+    total_interest += interest
+    balance += interest
+    balance -= mp
+    month += 1
+
+while balance <=0:
+
+    print(f"Joey takes a car loan to buy a new car for ${P}.\nThe loan has an annual interest rate of {rate}% per month. ")
+    print(f"He makes monthly payments of ${mp}.")
+    print(f"{month} month") 
+    print(f"He will have paid {total_interest:.2f} in interest")  
+    break
+
 
