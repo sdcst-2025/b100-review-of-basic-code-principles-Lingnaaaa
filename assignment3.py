@@ -23,3 +23,20 @@ rate: 5%
 10 years
 final balance: 1320.68
 """
+
+P=float(input("Enter the annual investment($):"))
+rate=float(input("Enter the annual rate(%):"))
+r=rate / 100
+t=int(input("Enter the number of years:"))
+A=0.0
+year=0
+
+
+while year<=(t-1):
+    year+=1
+    A+=P
+    A*=(1+r)
+
+balance=A
+print(f"After {t} year, final balance is ${balance:.2f}")
+
